@@ -1,8 +1,21 @@
-```python
-r1.cmd("/usr/sbin/zebra -f /tmp/quagga/zebra-{n}.conf -d -A 127.0.0.1 -i /tmp/zebra-{n}.pid > logs/zebra-{n}.log 2>&1".format(n=r1.name))
-time.sleep(2)
-r1.cmd("/usr/sbin/ripd -f /tmp/quagga/ripd-{n}.conf -d -A 127.0.0.1 -i /tmp/ripd-{n}.pid > logs/ripd-{n}.log 2>&1".format(n=r1.name))
-r2.cmd("/usr/sbin/zebra -f /tmp/quagga/zebra-{n}.conf -d -A 127.0.0.1 -i /tmp/zebra-{n}.pid > logs/zebra-{n}.log 2>&1".format(n=r2.name))
-time.sleep(2)
-r2.cmd("/usr/sbin/ripd -f /tmp/quagga/ripd-{n}.conf -d -A 127.0.0.1 -i /tmp/ripd-{n}.pid > logs/ripd-{n}.log 2>&1".format(n=r2.name))
-```
+# Sobre o Projeto
+
+Criação de uma topologia de redes usando o software Mininet-wifi com roteadores, pontos de acesso, switches, estações de trabalho e estações móveis, conforme mapa abaixo.
+
+Link vermelho = 1Gbps
+
+Link preto = 10Gbps
+
+<div align="center">
+
+![alt text](https://github.com/jhonatanbitencourt/labRedes/blob/main/Topologia%20com%20Roteamento/Topologia.png)
+  
+</div>
+
+<h5 align="center">
+    Os arquivos contidos na pasta .conf ripd e zebra são respectivamente para inicialiazr o protocolo e criação de interfaces
+  </h5>
+
+<h3 align="center">
+    Atenção, para este projeto deve-se conter apenas rotas dinâmicas criadas pelo protocolo de roteamento RIP entre as redes
+</h3>
